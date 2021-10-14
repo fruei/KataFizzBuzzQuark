@@ -17,7 +17,7 @@ namespace KataFizzBuzzTest
         [InlineData(55, "Buzz")]
         [InlineData(45, "FizzBuzz")]
         [InlineData(67, "67")]
-        public void NumToFizzBuzz_Number_FizzBuzzStringOrNumber(int number, string expected)
+        public void NumToFizzBuzz_Number_FizzBuzzComposedStringOrNumberString(int number, string expected)
         {
             /// Arrange
             FizzBuzz _fizzBuzz = new FizzBuzz();
@@ -36,7 +36,7 @@ namespace KataFizzBuzzTest
             new string[] { "11", "Fizz", "Fizz", "14", "FizzBuzz", "16", "17",
                 "Fizz", "19", "Buzz", "Fizz", "22", "Fizz", "Fizz", "Buzz",
                 "26", "Fizz", "28","29", "FizzBuzz", "Fizz", "Fizz" })]
-        public void NumListToFizzBuzzNumberList_NumbersList_FizzBuzzNumberPopulatedList(int[] numbersList, string[] expected)
+        public void NumListToFizzBuzzNumberList_NumbersList_FizzBuzzComposedStringOrNumberStringPopulatedList(int[] numbersList, string[] expected)
         {
             /// Arrange
             FizzBuzz _fizzBuzz = new FizzBuzz();

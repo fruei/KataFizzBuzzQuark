@@ -6,20 +6,16 @@ namespace KataFizzBuzz
     {
         public string NumToFizzBuzz(int number)
         {
-            if (!DivisibleBy3OrContains3(number)&&!DivisibleBy5OrContains5(number)) return number.ToString();
+            if (!DivisibleByOrContainsDivider(number,3)&&!DivisibleByOrContainsDivider(number,5)) return number.ToString();
             string result = "";
-            if (DivisibleBy3OrContains3(number)) result += "Fizz";
-            if (DivisibleBy5OrContains5(number)) result += "Buzz";
+            if (DivisibleByOrContainsDivider(number,3)) result += "Fizz";
+            if (DivisibleByOrContainsDivider(number,5)) result += "Buzz";
             return result;
         }
 
-        bool DivisibleBy3OrContains3(int number)
+        bool DivisibleByOrContainsDivider(int number, int divider)
         {
-            return number % 3 == 0 || number.ToString().Contains('3') ? true : false;
-        }
-        bool DivisibleBy5OrContains5(int number)
-        {
-            return number % 5 == 0 || number.ToString().Contains('5') ? true : false;
+            return number % divider == 0 || number.ToString().Contains(divider.ToString()) ? true : false;
         }
 
         public string[] NumListToFizzBuzzNumberList(int[] numbersList)
